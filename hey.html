@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Mr. Sagar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- OPENING -->
+        <section class="screen active" id="start">
+
+            <p class="label">A private communiqué</p>
+
+            <h1>Mr. Sagar.</h1>
+
+            <p class="sub">
+                There exists a matter upon which
+                I have been unnecessarily contemplative.
+            </p>
+
+            <button onclick="openPart('letter')">
+                Examine the matter
+                <span>↗</span>
+            </button>
+
+        </section>
+
+
+        <!-- LETTER -->
+        <section class="screen" id="letter">
+
+            <p class="label">01 / An acknowledgement</p>
+
+            <h2>
+                I owe you an apology,
+                albeit one considerably overdue.
+            </h2>
+
+            <p class="text">
+                I shall refrain from manufacturing an elaborate
+                justification for circumstances in which my own
+                conduct may have contributed to unnecessary
+                turbulence.
+            </p>
+
+            <p class="text">
+                Whatever our present circumstances may signify,
+                I retain an unfeigned regard for the person you are
+                and for the history we happen to share.
+            </p>
+
+            <button onclick="openPart('question')">
+                There is another matter →
+            </button>
+
+        </section>
+
+
+        <!-- QUESTION -->
+        <section class="screen" id="question">
+
+            <p class="label">02 / A proposition</p>
+
+            <h2>
+                Were you afforded precisely one
+                benevolent concession toward me,
+                what would you choose?
+            </h2>
+
+            <button onclick="showChoices()">
+                Exercise your judgement
+            </button>
+
+            <div class="choices" id="choices">
+
+                <button onclick="answer('candour')">
+                    Bestow your unvarnished candour.
+                </button>
+
+                <button onclick="answer('forgive')">
+                    Exercise the magnanimity of forgiveness.
+                </button>
+
+                <button onclick="answer('conversation')">
+                    Indulge me in one unpremeditated conversation.
+                </button>
+
+            </div>
+
+            <p class="reply" id="reply"></p>
+
+            <button class="next hidden" id="last"
+                    onclick="openPart('ending')">
+                One final disclosure →
+            </button>
+
+        </section>
+
+
+        <!-- ENDING -->
+        <section class="screen" id="ending">
+
+            <p class="label">03 / Concluding remarks</p>
+
+            <h2>
+                No expectations.
+                No hidden clauses.
+            </h2>
+
+            <p class="text">
+                I merely wished to place an overdue apology
+                somewhere beyond the limitations of an ordinary
+                conversation.
+            </p>
+
+            <p class="text">
+                Whatever designation our relationship presently
+                possesses, I sincerely hope life treats you with
+                considerably more kindness than my occasionally
+                questionable judgement has managed to.
+            </p>
+
+            <button onclick="revealDog()">
+                Conclude the correspondence
+            </button>
+
+            <div class="dog hidden" id="dog">
+
+                <div class="dog-face">🐶</div>
+
+                <p>
+                    After all that unnecessarily sophisticated
+                    vocabulary...
+                </p>
+
+                <strong>
+                    I simply wanted to say: take care, Sagar.
+                </strong>
+
+                <small>— Kajal</small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
